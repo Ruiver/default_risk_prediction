@@ -1,11 +1,16 @@
-环境 python3.x tensorflow0.14
-### 训练
+# Requirment python3.x tensorflow0.14
+# FOR EBCC
+### Training
 python main.py --mode=train
-### 测试：
-demo_model填写data_path_save下面生成好的地址如1540982873
-python main.py --mode=train --demo_model=xxxx
-运行完后生成result.txt文件。
+note that because of the size limit of upload file, in this version, we didnt upload the ELMo embedding, readers can refer to https://github.com/berkay-onder/ELMoForManyLangs
+### testing：
+after training the EBCC model saved in data_path_save directory with the file name in the form of timestamp like 1540982873.
+Than run
+python main.py --mode=all --demo_model=file  name, notice that all_2 parameter mean apply model to both reviews and posts, in this release version we only uses posts. Please contact corresponding author to get dataset. https://pan.baidu.com/s/1N_m_6hTqtSjbLKyIwpEkFQ. The keywords extraction result will be generated in result.txt.
 
-预警模型有两种：
-第一种直接运行bow_classify下的py文件
-第二种是运行bow_classify/fc_te--st下的py文件
+# For platform default risk prediction
+### After result.txt文件。
+run bow_classfy/*py
+or run bow_classify/fc_test/*.py
+
+# Once the paper on public, all the datasets and pretrained model will release in this address.
